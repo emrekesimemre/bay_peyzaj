@@ -1,0 +1,64 @@
+# Proje: BAY PEYZAJ — Premium Peyzaj & Mimari Web Sitesi (Next.js)
+
+## 1. Rol ve Vizyon
+Sen kıdemli bir Frontend Geliştiricisisin. Hedefimiz; yerel bir peyzaj işletmesi ("BAY PEYZAJ") için Apple siteleri ve mimarlık ofisleri (örn: Fi Design) ağırlığında, lüks, minimalist, son derece hızlı ve marka bütünlüğüne sahip bir vitrin sitesi yapmaktır.
+Projede veritabanı veya CMS kullanılmayacaktır. Bütün veri yönetimi statik TypeScript dosyaları üzerinden yapılacaktır.
+
+## 2. Teknoloji Yığını
+- **Framework:** Next.js (App Router) + React
+- **Dil:** TypeScript
+- **Stilleme:** Tailwind CSS
+- **Animasyonlar:** Framer Motion
+- **Scroll Deneyimi:** Lenis (@studio-freight/react-lenis)
+- **Veri:** Local JSON/TypeScript array
+
+## 3. Görsel Kimlik ve Tasarım Kuralları (Kritik)
+### 3.1. Marka ve Logo
+- Eklenen logo dosyası (`image_0.png`) marka logosu olarak kullanılacaktır. Bu logo, temiz bir 'BAY PEYZAJ' yazısı, iki servi ağacı ve kıvrımlı yollar içeren dairesel, minimalist bir tasarıma sahiptir.
+- Logo, projenin `public/images/logo.png` (veya benzeri) klasöründe saklanmalı ve Header bileşeninde uygun boyutta render edilmelidir.
+
+### 3.2. Renk Paleti (Marka Renkleri)
+- Tasarım, logodaki renkler ana palet olarak kabul edilerek oluşturulmalıdır.
+- Tailwind CSS `colors` konfigürasyonunda bu renkler tanımlanmalıdır:
+  - `servi-yesili`: Koyu, sakin servi yeşili (Logodaki ana renk). `bg-servi-yesili`, `text-servi-yesili` vb. olarak kullanılmalıdır.
+  - `antrasit`: Koyu antrasit gri (Logonun dış halkası ve metin). `text-antrasit` vb. olarak kullanılmalıdır.
+  - `saf-beyaz`: Saf beyaz (`#FFFFFF`, arka plan).
+- Tasarım dili, bu üç rengin ferah, minimalist ve lüks bir kombinasyonu üzerine kurulmalıdır.
+
+### 3.3. UI/UX ve Tipografi
+- **Whitespace (Ferahlık):** Elementler arası boşlukları (`gap`, `padding`, `margin`) her zaman cömert kullan. Sıkışık tasarımlar kesinlikle yasaktır.
+- **Tipografi:** Başlıklar için zarif bir Serif font (örn: Playfair Display), gövde metinleri için okunaklı bir Sans-Serif (örn: Inter, Geist) kullanılmalıdır. Saf siyah (`#000000`) yerine antrasit veya koyu slate (`text-slate-900`) kullanılmalıdır.
+- **Asimetrik Grid (Bento Layout):** Proje galerilerinde sıkıcı standart gridler yerine yatay (landscape) ve dikey (portrait) fotoğrafların bir arada şık duracağı, CSS Grid tabanlı asimetrik dizilimler kullanılmalıdır.
+- **Resposive Design:** Mobil öncelikli düşünülmeli. Mobilde dikey kaydırma hissiyatı, butona tıklama alanları kusursuz olmalıdır. Sabit bir WhatsApp butonu sağ alt köşede yer almalıdır.
+
+## 4. Animasyon ve Etkileşim (Apple Tarzı Lüks Hissiyat)
+- Sayfa kaydırma (scroll) işlemi **Lenis** ile pürüzsüz (smooth) hale getirilmelidir.
+- **Scroll-Linked Parallax (Apple Stili):** Framer Motion'ın `useScroll` ve `useTransform` hook'ları aktif olarak kullanılacaktır.
+  - *Hero Section:* Kullanıcı aşağı kaydırdıkça arka plandaki ana resim yazılardan daha yavaş bir hızda yukarı kaymalıdır (Gerçek Paralaks).
+  - *Resim Galerileri (Ken Burns Efekti):* Resimlerin kapsayıcı `div`'leri `overflow-hidden` olmalı, sayfa aşağı kaydırıldıkça içerideki resim çok yavaşça (örneğin scale: 1'den 1.15'e) büyümelidir. İçine doğru yürüme (derinlik) hissi verilmelidir.
+- Zıplayan, sağdan soldan hızlıca giren ucuz animasyonlar yasaktır. Geçişler sadece yumuşak "fade-in-up" (aşağıdan yavaşça beliren) şeklinde olmalıdır.
+
+## 5. Veri Yönetimi (CMS Yok)
+Proje verileri `data/projects.ts` dosyasında tutulacaktır. Resimlerin patlamaması ve asimetrik gridin çalışması için veri yapısı şu şemaya uymalıdır:
+```typescript
+type ProjectImage = { url: string; orientation: 'landscape' | 'portrait'; alt: string; };
+type Project = { id: string; title: string; description: string; images: ProjectImage[]; };
+6. SEO ve Performans (Zorunlu Kurallar)
+Görseller: Bütün resimler istisnasız next/image ile render edilecek ve parallax/scale animasyonları bu bileşeni saracak şekilde yapılacaktır.
+
+Metadata: layout.tsx ve page.tsx dosyalarında Next.js Metadata API'si ile dinamik title, description ve OpenGraph (og:image) etiketleri zorunludur.
+
+Şema: Yerel işletme (LocalBusiness) JSON-LD şeması ana sayfaya entegre edilecektir.
+
+Sitemap: Otomatik sitemap.ts ve robots.txt dosyaları oluşturulmalıdır.
+
+7. Geliştirme Aşamaları (Plan)
+Adım: Next.js kurulumu, Tailwind (servi-yesili ve antrasit renkleri dahil), Font, Logo entegrasyonu ve Lenis (Smooth Scroll) konfigürasyonu.
+
+Adım: Temel veri tipinin (types.ts) ve sahte verinin (data/projects.ts) oluşturulması.
+
+Adım: Tam ekran, useScroll ile paralaks efekti verilmiş, Framer Motion destekli HeroSection bileşeninin kodlanması.
+
+Adım: Yatay ve dikey resimleri algılayan asimetrik Grid tabanlı, resimleri scroll esnasında yavaşça büyüyen (scale) ProjectGallery bileşeninin yazılması.
+
+Adım: Dinamik proje sayfalarının (/projeler/[id]) ve SEO ayarlarının tamamlanması.
