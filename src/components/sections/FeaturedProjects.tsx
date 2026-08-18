@@ -168,7 +168,7 @@ export default function FeaturedProjects() {
             href="/projeler"
             className="inline-flex items-center gap-3 font-sans text-sm tracking-widest uppercase px-10 py-4 border border-antrasit/30 text-antrasit hover:border-servi-yesili hover:text-servi-yesili transition-all duration-300"
           >
-            Tüm 10 Projemizi Görüntüle
+            Tüm Projelerimizi Görüntüle
           </Link>
         </motion.div>
 

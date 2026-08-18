@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import Header from "@/components/layout/Header";
@@ -52,6 +53,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
         </SmoothScroll>
         <WhatsAppButton />
+        <Analytics />
       </body>
     </html>
   );
