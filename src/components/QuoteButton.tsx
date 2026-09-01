@@ -1,9 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import QuoteModal from "@/components/QuoteModal";
 
 export default function QuoteButton() {
+  const t = useTranslations("Nav");
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -11,9 +13,9 @@ export default function QuoteButton() {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="inline-flex items-center gap-3 font-sans text-sm tracking-widest uppercase px-8 py-3.5 bg-servi-yesili text-saf-beyaz hover:bg-antrasit transition-colors duration-300"
+        className="font-sans text-sm tracking-widest uppercase px-6 py-2.5 border border-servi-yesili text-servi-yesili hover:bg-servi-yesili hover:text-saf-beyaz transition-all duration-300"
       >
-        Teklif Al
+        {t("cta")}
       </button>
       <QuoteModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </>

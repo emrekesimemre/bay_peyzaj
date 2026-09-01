@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  /* Marka Renkleri */
+  /* Brand colors — keep in sync with src/data/theme.ts */
   --color-servi-yesili: #7a9a5c;
   --color-antrasit: #2c3333;
   --color-saf-beyaz: #ffffff;
 
-  /* Tipografi */
+  /* Typography */
   --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
 
-  /* Arka plan & metin */
+  /* Background & text */
   --color-background: var(--color-saf-beyaz);
   --color-foreground: var(--color-antrasit);
 }
@@ -48,4 +48,35 @@ body {
   [aria-disabled="true"] {
     cursor: not-allowed;
   }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip link — keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--color-servi-yesili);
+  color: #fff;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 1rem;
 }
