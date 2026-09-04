@@ -25,7 +25,7 @@ export const SITE = {
   /** International format, no leading + (for tel: and wa.me) */
   phoneRaw: "905077631206",
 
-  email: "baypeyzaj06@gmail.com",
+  email: "info@baypeyzaj.com",
 
   address: {
     street: "Anadolu Bulvarı No 148",
