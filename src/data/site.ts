@@ -28,20 +28,22 @@ export const SITE = {
   email: "baypeyzaj06@gmail.com",
 
   address: {
-    street: "Yenimahalle",
-    city: "Ankara",
+    street: "Anadolu Bulvarı No 148",
+    city: "Yenimahalle, Ankara",
     country: "Türkiye",
     countryCode: "TR",
-    mapsUrl: "https://maps.google.com/?q=Bay+Peyzaj+Ankara",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Anadolu+Bulvar%C4%B1+No+148+Yenimahalle+Ankara",
   },
 
   hours: {
     tr: "Pazartesi – Cumartesi 08:00 – 18:00",
     en: "Monday – Saturday 08:00 – 18:00",
   },
+  /** Two-line format for narrow footer columns */
   hoursShort: {
-    tr: "Pzt – Cmt  08:00 – 18:00",
-    en: "Mon – Sat  08:00 – 18:00",
+    tr: "Pzt – Cmt\n08:00 – 18:00",
+    en: "Mon – Sat\n08:00 – 18:00",
   },
 
   social: {

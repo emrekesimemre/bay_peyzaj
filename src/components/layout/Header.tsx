@@ -60,8 +60,8 @@ export default function Header() {
 
   const handleHashLink = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-      if (!href.startsWith("/#")) return;
       setMenuOpen(false);
+      if (!href.startsWith("/#")) return;
       if (pathname !== "/") return;
       e.preventDefault();
       const localizedHref =

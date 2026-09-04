@@ -31,7 +31,9 @@ export default function Footer() {
   const contactItems = [
     {
       label: t("labelAddress"),
-      value: `${SITE.address.street}\n${SITE.address.city}, ${SITE.address.country}`,
+      // Compact two-line footer display (omit country — implied)
+      value: `${SITE.address.street}\n${SITE.address.city}`,
+      href: SITE.address.mapsUrl,
     },
     { label: t("labelEmail"), value: SITE.email, href: `mailto:${SITE.email}` },
     {
@@ -70,21 +72,27 @@ export default function Footer() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 mb-20 md:mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 md:gap-8 mb-20 md:mb-24">
           {contactItems.map((item, i) => (
-            <motion.div key={item.label} {...animProps(0.1 + i * 0.08)}>
+            <motion.div
+              key={item.label}
+              className={i === 0 ? "col-span-2 md:col-span-1" : undefined}
+              {...animProps(0.1 + i * 0.08)}
+            >
               <p className="font-sans text-[10px] tracking-[0.25em] uppercase text-white/35 mb-3">
                 {item.label}
               </p>
               {item.href ? (
                 <a
                   href={item.href}
-                  className="font-sans text-sm md:text-base text-white/75 hover:text-servi-yesili transition-colors duration-300 whitespace-pre-line leading-relaxed"
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="font-sans text-sm md:text-base text-white/75 hover:text-servi-yesili transition-colors duration-300 whitespace-pre-line leading-snug"
                 >
                   {item.value}
                 </a>
               ) : (
-                <p className="font-sans text-sm md:text-base text-white/75 whitespace-pre-line leading-relaxed">
+                <p className="font-sans text-sm md:text-base text-white/75 whitespace-pre-line leading-snug">
                   {item.value}
                 </p>
               )}
