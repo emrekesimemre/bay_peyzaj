@@ -13,6 +13,12 @@ export default function manifest(): MetadataRoute.Manifest {
     background_color: THEME.colors.safBeyaz,
     icons: [
       {
+        src: "/favicon-48x48.png",
+        sizes: "48x48",
+        type: "image/png",
+        purpose: "any",
+      },
+      {
         src: SITE.logo.mark,
         sizes: "512x512",
         type: "image/png",

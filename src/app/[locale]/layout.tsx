@@ -90,6 +90,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t("defaultDescription"),
       images: [SITE.logo.og],
     },
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+        { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      ],
+      apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    },
     alternates: {
       canonical: canonicalBase,
       languages: { tr: SITE.url, en: `${SITE.url}/en` },
