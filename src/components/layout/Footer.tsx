@@ -117,7 +117,14 @@ export default function Footer() {
             </p>
             <p className="font-sans text-[10px] text-white/20 tracking-widest text-center uppercase">
               Designed &amp; Developed by{" "}
-              <span className="text-white/35">Emre Kesim</span>
+              <a
+                href="https://github.com/emrekesimemre"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/35 hover:text-servi-yesili transition-colors duration-300"
+              >
+                Emre Kesim
+              </a>
             </p>
           </div>
 
