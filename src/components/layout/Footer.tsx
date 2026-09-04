@@ -97,25 +97,29 @@ export default function Footer() {
           {...animProps(0.45)}
         >
           <div className="flex items-center gap-3">
-            <div className="relative flex items-center justify-center w-12 h-12 rounded-full bg-saf-beyaz">
-              <div className="relative w-10 h-10">
-                <Image
-                  src={SITE.logo.mark}
-                  alt={`${SITE.name} Logo`}
-                  fill
-                  sizes="40px"
-                  className="object-contain"
-                />
-              </div>
+            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-saf-beyaz shrink-0">
+              <Image
+                src={SITE.logo.mark}
+                alt={`${SITE.name} Logo`}
+                fill
+                sizes="48px"
+                className="object-cover"
+              />
             </div>
             <span className="font-serif text-sm font-semibold tracking-wider text-white/40 uppercase">
               {SITE.name}
             </span>
           </div>
 
-          <p className="font-sans text-xs text-white/30 tracking-wide text-center">
-            © {new Date().getFullYear()} {SITE.name}. {t("copyright")}
-          </p>
+          <div className="flex flex-col items-center gap-1.5">
+            <p className="font-sans text-xs text-white/30 tracking-wide text-center">
+              © {new Date().getFullYear()} {SITE.name}. {t("copyright")}
+            </p>
+            <p className="font-sans text-[10px] text-white/20 tracking-widest text-center uppercase">
+              Designed &amp; Developed by{" "}
+              <span className="text-white/35">Emre Kesim</span>
+            </p>
+          </div>
 
           <div className="flex flex-col items-center md:items-end gap-4">
             <div className="flex items-center gap-5">
