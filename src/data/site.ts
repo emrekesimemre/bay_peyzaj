@@ -17,7 +17,7 @@ export const SITE = {
     mark: "/images/logo.png",
     /** Stacked lockup — Open Graph and light-background brand */
     lockup: "/images/logo-lockup.png",
-    og: "https://bay-peyzaj.vercel.app/images/og.jpg",
+    og: "/images/og.jpg",
   },
 
   /** Display string. Use phoneRaw for tel: and wa.me links. */
