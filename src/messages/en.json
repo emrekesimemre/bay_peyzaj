@@ -11,9 +11,9 @@
   },
   "Hero": {
     "eyebrow": "Premium Landscape & Architectural Design",
-    "h1Line1": "Living Spaces",
-    "h1Line2": "In Harmony with Nature",
-    "subtitle": "Respect for nature, quality for living spaces.",
+    "h1Line1": "Respect for nature,",
+    "h1Line2": "quality for living spaces.",
+    "subtitle": "Living Spaces In Harmony with Nature",
     "cta": "Get a Quote",
     "ctaProjects": "Our Projects",
     "scrollHint": "Explore"
@@ -32,10 +32,10 @@
   "About": {
     "eyebrow": "Who We Are",
     "h2": "About Us",
-    "p1": "We set out with the vision of adding value to nature and quality to living spaces. BAY PEYZAJ approaches every project not merely as a garden design, but as an architectural expression of the deep bond between humans and nature. Every leaf, every stone, every trace of water — each is a piece of a carefully crafted narrative.",
-    "p2": "We draw inspiration from the Mediterranean's climatic richness, Anatolia's historic landscape tradition, and contemporary architectural design. From private villa gardens to urban open spaces, poolside arrangements to therapeutic gardens — we realise quality and aesthetics without compromise at every scale.",
-    "p3": "Transparent communication at every stage of the design process, adherence to scheduled timelines, and flawless excellence at delivery — these three principles are BAY PEYZAJ's unwavering commitment.",
-    "quote": "Every green space is a living architectural masterpiece.",
+    "p1": "We bring together the nature of people, the spirit of nature, and the character of space on a single line.",
+    "p2": "We closely follow landscape practices, gardens, and design approaches from different geographies around the world — interpreting the knowledge we gather from various regions through our own design language.",
+    "p3": "We add value to nature and quality to living spaces.",
+    "quote": "A good life begins with good design. Every detail, with care.",
     "imageAlt": "Bay Peyzaj — Design in Harmony with Nature"
   },
   "Process": {
@@ -74,7 +74,8 @@
     "filterRezidans": "Residential",
     "filterTicari": "Commercial",
     "filterKamu": "Public",
-    "filterTeras": "Terrace & Summer"
+    "filterTeras": "Terrace & Summer",
+    "noProjects": "No projects found in this category yet."
   },
   "ProjectDetail": {
     "back": "All Projects",

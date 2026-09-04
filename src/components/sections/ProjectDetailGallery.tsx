@@ -28,7 +28,7 @@ function GalleryItem({
       ref={containerRef}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-5% 0px" }}
+      viewport={{ once: true, margin: "120px 0px" }}
       transition={{ duration: 0.8, ease: easeOut, delay: index * 0.08 }}
       className={`relative overflow-hidden rounded-sm cursor-zoom-in group ${
         isLandscape

@@ -4,17 +4,17 @@
     "projects": "Projeler",
     "about": "Hakkımızda",
     "contact": "İletişim",
-    "cta": "Teklif Al",
+    "cta": "Teklif Alın",
     "toggleMenu": "Menüyü aç/kapat",
     "skipToContent": "İçeriğe geç",
     "switchLanguage": "Dil değiştir"
   },
   "Hero": {
     "eyebrow": "Premium Peyzaj & Mimari Tasarım",
-    "h1Line1": "Doğayla Uyumlu",
-    "h1Line2": "Yaşam Alanları",
-    "subtitle": "Doğaya değer, yaşam alanlarına kalite.",
-    "cta": "Teklif Al",
+    "h1Line1": "Doğaya değer,",
+    "h1Line2": "yaşam alanlarına kalite.",
+    "subtitle": "Doğayla Uyumlu Yaşam Alanları",
+    "cta": "Teklif Alın",
     "ctaProjects": "Projelerimiz",
     "scrollHint": "Keşfet"
   },
@@ -32,10 +32,10 @@
   "About": {
     "eyebrow": "Biz Kimiz",
     "h2": "Hakkımızda",
-    "p1": "Doğaya değer, yaşam alanlarına kalite katma vizyonuyla yola çıktık. BAY PEYZAJ; her projeye yalnızca bir bahçe tasarımı olarak değil, insanın doğayla kurduğu derin bağın mimari bir ifadesi olarak yaklaşır. Her yaprak, her taş, her su izi — hepsi özenle seçilmiş bir anlatının parçasıdır.",
-    "p2": "Akdeniz'in iklim zenginliğinden, Anadolu'nun tarihi peyzaj geleneğinden ve çağdaş mimari tasarım anlayışından ilham alıyoruz. Özel villa bahçelerinden kentsel açık alanlara, havuz kenarı düzenlemelerinden terapi bahçelerine kadar her ölçekte kaliteyi ve estetiği ödünsüz hayata geçiriyoruz.",
-    "p3": "Tasarım sürecinin her aşamasında şeffaf iletişim, öngörülen sürelere bağlılık ve teslimatta eksiksiz mükemmellik — bu üç ilke, BAY PEYZAJ'ın değişmeyen taahhüdüdür.",
-    "quote": "Her yeşil alan, yaşayan bir mimari eserdir.",
+    "p1": "İnsanın doğasını, doğanın ruhunu ve mekânın karakterini aynı çizgide buluşturuyoruz.",
+    "p2": "Dünyanın farklı coğrafyalarındaki peyzaj uygulamalarını, bahçeleri ve tasarım yaklaşımlarını yakından takip ediyor; farklı coğrafyalardan edindiğimiz birikimi kendi tasarım dilimizle yorumluyoruz.",
+    "p3": "Doğaya değer, yaşam alanlarına kalite katıyoruz.",
+    "quote": "İyi bir yaşam, iyi bir tasarımla başlar. Her detay, özenle.",
     "imageAlt": "Bay Peyzaj — Doğa ile İç İçe Tasarım"
   },
   "Process": {
@@ -74,7 +74,8 @@
     "filterRezidans": "Rezidans",
     "filterTicari": "Ticari",
     "filterKamu": "Kamu",
-    "filterTeras": "Teras & Yazlık"
+    "filterTeras": "Teras & Yazlık",
+    "noProjects": "Bu kategoride henüz proje yok."
   },
   "ProjectDetail": {
     "back": "Tüm Projeler",

@@ -52,7 +52,7 @@ const steps = [
 export default function ProcessSection() {
   const t = useTranslations("Process");
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-8% 0px" });
+  const isInView = useInView(ref, { once: true, margin: "120px 0px" });
 
   return (
     <section className="py-24 md:py-36 px-6 md:px-16 bg-stone-50">

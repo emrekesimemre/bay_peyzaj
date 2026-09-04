@@ -43,12 +43,12 @@ export default function HeroSection() {
           </motion.span>
 
           <motion.h1
-            className="font-serif text-5xl md:text-7xl lg:text-8xl font-semibold text-antrasit tracking-tight leading-tight mb-6"
+            className="font-serif text-4xl md:text-6xl lg:text-7xl font-semibold text-servi-yesili tracking-tight leading-tight mb-6"
             {...fadeUp(0.25)}
           >
             {t("h1Line1")}
             <br />
-            <span className="italic text-antrasit/70">{t("h1Line2")}</span>
+            <span className="italic text-servi-yesili/60">{t("h1Line2")}</span>
           </motion.h1>
 
           <motion.p
@@ -62,13 +62,13 @@ export default function HeroSection() {
             <button
               type="button"
               onClick={() => setIsModalOpen(true)}
-              className="font-sans text-sm tracking-[0.2em] uppercase px-8 py-4 bg-servi-yesili text-saf-beyaz hover:bg-antrasit transition-all duration-400 min-w-44"
+              className="font-sans text-sm tracking-[0.2em] uppercase px-8 py-4 bg-servi-yesili text-saf-beyaz hover:bg-antrasit transition-all duration-400 w-52"
             >
               {t("cta")}
             </button>
             <a
               href="#projeler"
-              className="font-sans text-sm tracking-[0.2em] uppercase px-8 py-4 border border-antrasit/30 text-antrasit/70 hover:border-antrasit hover:text-antrasit transition-all duration-400 min-w-44"
+              className="font-sans text-sm tracking-[0.2em] uppercase px-8 py-4 border border-antrasit/30 text-antrasit/70 hover:border-antrasit hover:text-antrasit transition-all duration-400 w-52"
             >
               {t("ctaProjects")}
             </a>

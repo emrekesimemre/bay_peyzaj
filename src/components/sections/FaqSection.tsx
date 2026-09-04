@@ -13,7 +13,7 @@ export default function FaqSection({ locale }: { locale: Locale }) {
   const faqItems = getFaq(locale);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const isInView = useInView(ref, { once: true, margin: "120px" });
 
   return (
     <section ref={ref} id="sss" className="py-24 md:py-36 px-6 md:px-16 bg-saf-beyaz">

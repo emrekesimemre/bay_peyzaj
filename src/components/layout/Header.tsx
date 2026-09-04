@@ -75,6 +75,15 @@ export default function Header() {
 
   return (
     <>
+      {/* Mobile Menu Backdrop */}
+      {menuOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-antrasit/20 md:hidden"
+          onClick={() => setMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
@@ -141,25 +150,28 @@ export default function Header() {
               </button>
             </nav>
 
-            {/* Mobile Menu Button */}
-            <button
-              type="button"
-              className="md:hidden flex flex-col gap-1.5 p-2"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label={t("toggleMenu")}
-              aria-expanded={menuOpen}
-              aria-controls="mobile-menu"
-            >
-              <span
-                className={`block w-6 h-0.5 bg-antrasit transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-antrasit transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-antrasit transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-              />
-            </button>
+            {/* Mobile: Language + Hamburger */}
+            <div className="md:hidden flex items-center gap-4">
+              <LanguageSwitcher />
+              <button
+                type="button"
+                className="flex flex-col gap-1.5 p-2"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label={t("toggleMenu")}
+                aria-expanded={menuOpen}
+                aria-controls="mobile-menu"
+              >
+                <span
+                  className={`block w-6 h-0.5 bg-antrasit transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+                />
+                <span
+                  className={`block w-6 h-0.5 bg-antrasit transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+                />
+                <span
+                  className={`block w-6 h-0.5 bg-antrasit transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+                />
+              </button>
+            </div>
           </div>
         </div>
 
@@ -180,11 +192,6 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-
-            {/* Language switcher in drawer */}
-            <div className="py-1">
-              <LanguageSwitcher />
-            </div>
 
             <button
               type="button"

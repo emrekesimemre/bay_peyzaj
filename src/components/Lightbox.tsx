@@ -4,6 +4,7 @@ import { useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { useLenis } from "lenis/react";
 import type { ProjectImage } from "@/data/projects";
 
 interface LightboxProps {
@@ -22,6 +23,7 @@ export default function Lightbox({
   onNext,
 }: LightboxProps) {
   const t = useTranslations("ProjectDetail");
+  const lenis = useLenis();
   const isOpen = currentIndex !== null;
   const image = currentIndex !== null ? images[currentIndex] : null;
 
@@ -35,14 +37,26 @@ export default function Lightbox({
     [isOpen, onClose, onPrev, onNext],
   );
 
+  // Keyboard navigation
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
-    if (isOpen) document.body.style.overflow = "hidden";
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [handleKeyDown]);
+
+  // Scroll lock — hem body hem Lenis durdurulur
+  useEffect(() => {
+    if (isOpen) {
+      lenis?.stop();
+      document.body.style.overflow = "hidden";
+    } else {
+      lenis?.start();
+      document.body.style.overflow = "";
+    }
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      lenis?.start();
       document.body.style.overflow = "";
     };
-  }, [isOpen, handleKeyDown]);
+  }, [isOpen, lenis]);
 
   return (
     <AnimatePresence>
