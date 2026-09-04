@@ -139,6 +139,56 @@ export const projectsData: BilingualProject[] = [
       },
     ],
   },
+  {
+    id: "site-peyzaj-01",
+    title: {
+      tr: "Site Projesi",
+      en: "Residential Complex Project",
+    },
+    description: {
+      tr: "Rezidans sitesi ortak alanının çevre düzenlemesi. Doğal çakıl taşı kaplama, mozaik detaylar ve yeşil bitkilerle hayat bulan ferah bir dış mekân peyzajı.",
+      en: "Landscape design for the common area of a residential complex. An airy outdoor arrangement brought to life with natural pebble paving, mosaic details, and lush greenery.",
+    },
+    category: "rezidans",
+    location: "Ankara",
+    year: 2025,
+    featured: true,
+    images: [
+      {
+        url: "/images/projects/proje-04.jpg",
+        orientation: "landscape",
+        alt: {
+          tr: "Site Peyzaj — Taş Mozaik Çeşme",
+          en: "Residential Landscape — Stone Mosaic Fountain",
+        },
+      },
+    ],
+  },
+  {
+    id: "site-peyzaj-02",
+    title: {
+      tr: "Site Ortak Alan Peyzajı",
+      en: "Residential Common Area Landscaping",
+    },
+    description: {
+      tr: "Yapay çim zemin, beyaz küp saksılar içinde servi ağaçları ve oturma alanlarıyla düzenlenen rezidans site bahçesi. Ahşap çardak ve dekoratif sınır taşlarıyla tamamlanan ferah dış mekân tasarımı.",
+      en: "A residential complex garden arranged with artificial turf, cypress trees in white cubic planters, and seating areas. An airy outdoor design completed with a wooden gazebo and decorative border stones.",
+    },
+    category: "rezidans",
+    location: "Ankara",
+    year: 2025,
+    featured: true,
+    images: [
+      {
+        url: "/images/projects/proje-05.jpg",
+        orientation: "landscape",
+        alt: {
+          tr: "Site Peyzaj — Yapay Çim ve Servi Ağaçları",
+          en: "Residential Landscape — Artificial Turf and Cypress Trees",
+        },
+      },
+    ],
+  },
 ];
 
 export function getProjects(locale: Locale): Project[] {

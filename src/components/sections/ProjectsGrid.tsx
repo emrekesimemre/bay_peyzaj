@@ -83,6 +83,22 @@ function GalleryPhoto({
   );
 }
 
+/**
+ * Asimetrik span deseni (3-sütun grid):
+ * index % 4 === 0  → col-span-2  (geniş sol)
+ * index % 4 === 1  → col-span-1  (dar sağ)
+ * index % 4 === 2  → col-span-1  (dar sol)
+ * index % 4 === 3  → col-span-2  (geniş sağ)
+ * Tek kalan eleman → col-span-3  (tam genişlik)
+ */
+function getColSpan(index: number, total: number): string {
+  // Son eleman ve sayı teke kalırsa tam genişlik
+  if (index === total - 1 && total % 2 !== 0) return "md:col-span-3";
+  const pos = index % 4;
+  if (pos === 0 || pos === 3) return "md:col-span-2";
+  return "md:col-span-1";
+}
+
 function GalleryGrid({
   filtered,
   onPhotoClick,
@@ -125,29 +141,6 @@ function GalleryGrid({
     );
   }
 
-  if (filtered.length === 2) {
-    return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4"
-      >
-        {filtered.map((p, i) => (
-          <GalleryPhoto
-            key={p.id}
-            src={p.images[0].url}
-            alt={p.images[0].alt}
-            title={p.title}
-            index={i}
-            className="h-[75vw] md:h-[58vh]"
-            onClick={() => onPhotoClick(p.images, 0)}
-          />
-        ))}
-      </motion.div>
-    );
-  }
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -155,30 +148,17 @@ function GalleryGrid({
       exit={{ opacity: 0 }}
       className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4"
     >
-      <GalleryPhoto
-        src={filtered[0].images[0].url}
-        alt={filtered[0].images[0].alt}
-        title={filtered[0].title}
-        index={0}
-        className="md:col-span-2 h-[75vw] md:h-[55vh]"
-        onClick={() => onPhotoClick(filtered[0].images, 0)}
-      />
-      <GalleryPhoto
-        src={filtered[1].images[0].url}
-        alt={filtered[1].images[0].alt}
-        title={filtered[1].title}
-        index={1}
-        className="md:col-span-1 h-[75vw] md:h-[55vh]"
-        onClick={() => onPhotoClick(filtered[1].images, 0)}
-      />
-      <GalleryPhoto
-        src={filtered[2].images[0].url}
-        alt={filtered[2].images[0].alt}
-        title={filtered[2].title}
-        index={2}
-        className="md:col-span-3 h-[60vw] md:h-[45vh]"
-        onClick={() => onPhotoClick(filtered[2].images, 0)}
-      />
+      {filtered.map((p, i) => (
+        <GalleryPhoto
+          key={p.id}
+          src={p.images[0].url}
+          alt={p.images[0].alt}
+          title={p.title}
+          index={i}
+          className={`${getColSpan(i, filtered.length)} h-[75vw] md:h-[55vh]`}
+          onClick={() => onPhotoClick(p.images, 0)}
+        />
+      ))}
     </motion.div>
   );
 }
