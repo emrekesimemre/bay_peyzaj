@@ -110,13 +110,13 @@ export default function Header() {
               }}
               className="flex items-center gap-3 group"
             >
-              <div className="relative w-14 h-14 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-105">
+              <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src={SITE.logo.mark}
                   alt={SITE.name}
                   fill
                   sizes="64px"
-                  className="object-contain"
+                  className="object-cover"
                   priority
                 />
               </div>
