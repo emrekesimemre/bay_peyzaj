@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useState, useEffect, useCallback } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { useLenis } from "lenis/react";
 import { routing } from "@/i18n/routing";
 import QuoteModal from "@/components/QuoteModal";
 import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
@@ -13,6 +14,7 @@ export default function Header() {
   const t = useTranslations("Nav");
   const locale = useLocale();
   const pathname = usePathname();
+  const lenis = useLenis();
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -105,7 +107,7 @@ export default function Header() {
                     "",
                     locale === "en" ? "/en" : "/",
                   );
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  lenis?.scrollTo(0);
                 }
               }}
               className="flex items-center gap-3 group"
