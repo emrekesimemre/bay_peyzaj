@@ -13,6 +13,20 @@
   /* Background & text */
   --color-background: var(--color-saf-beyaz);
   --color-foreground: var(--color-antrasit);
+
+  /* Hero h1: same timing as Framer fadeUp(0.25). `both` holds opacity:0 during delay. */
+  --animate-fade-up: fade-up 0.9s cubic-bezier(0, 0, 0.2, 1) 0.25s both;
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 :root {
@@ -56,6 +70,7 @@ body {
   ::before,
   ::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;

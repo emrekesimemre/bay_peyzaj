@@ -126,7 +126,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <JsonLd locale={locale as Locale} />
           <SmoothScroll>
             <Header />
-            <main id="main-content" className="flex-1">
+            <main id="main-content" className="flex-1 min-h-screen">
               {children}
             </main>
             <ConditionalFooter />

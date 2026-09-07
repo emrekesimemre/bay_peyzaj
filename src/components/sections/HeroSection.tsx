@@ -42,14 +42,11 @@ export default function HeroSection() {
             {t("eyebrow")}
           </motion.span>
 
-          <motion.h1
-            className="font-serif text-4xl md:text-6xl lg:text-7xl font-semibold text-servi-yesili tracking-tight leading-tight mb-6"
-            {...fadeUp(0.25)}
-          >
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-semibold text-servi-yesili tracking-tight leading-tight mb-6 animate-fade-up">
             {t("h1Line1")}
             <br />
             <span className="italic text-servi-yesili/60">{t("h1Line2")}</span>
-          </motion.h1>
+          </h1>
 
           <motion.p
             className="font-serif text-lg md:text-xl text-antrasit/60 italic max-w-xl mx-auto mb-10"

@@ -86,7 +86,11 @@ export default function Footer() {
                 <a
                   href={item.href}
                   target={item.href.startsWith("http") ? "_blank" : undefined}
-                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  rel={
+                    item.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
                   className="font-sans text-sm md:text-base text-white/75 hover:text-servi-yesili transition-colors duration-300 whitespace-pre-line leading-snug"
                 >
                   {item.value}
@@ -123,7 +127,7 @@ export default function Footer() {
             <p className="font-sans text-xs text-white/30 tracking-wide text-center">
               © {new Date().getFullYear()} {SITE.name}. {t("copyright")}
             </p>
-            <p className="font-sans text-[10px] text-white/20 tracking-widest text-center uppercase">
+            <p className="font-sans text-[10px] text-white/20 tracking-widest text-center">
               Designed &amp; Developed by{" "}
               <a
                 href="https://github.com/emrekesimemre"
