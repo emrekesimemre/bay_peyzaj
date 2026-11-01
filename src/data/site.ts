@@ -10,7 +10,7 @@ export const SITE = {
     tr: "Premium Peyzaj & Mimari Tasarım",
     en: "Premium Landscape & Architectural Design",
   },
-  url: "https://baypeyzaj.com",
+  url: "https://www.baypeyzaj.com",
 
   logo: {
     /** Circular seal — header, footer, favicon, JSON-LD */
@@ -96,11 +96,14 @@ export function getLegalIdentity() {
 
 export function formatLegalDate(locale: string) {
   const dateLocale = locale === "en" ? "en-GB" : "tr-TR";
-  return new Date(`${LEGAL.lastUpdated}T00:00:00`).toLocaleDateString(dateLocale, {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  return new Date(`${LEGAL.lastUpdated}T00:00:00`).toLocaleDateString(
+    dateLocale,
+    {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    },
+  );
 }
 
 export type SiteConfig = typeof SITE;
