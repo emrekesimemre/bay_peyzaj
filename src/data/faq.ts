@@ -63,12 +63,12 @@ const faqData: BilingualFaqItem[] = [
   },
   {
     question: {
-      tr: "Hizmet bölgeniz neresi?",
-      en: "What is your service area?",
+      tr: "Hangi bölgelerde hizmet veriyorsunuz? Şehir dışı projeler yapıyor musunuz?",
+      en: "Which regions do you serve? Do you undertake projects outside Ankara?",
     },
     answer: {
-      tr: "Ankara merkez ve ilçeleri öncelikli hizmet bölgemizdir. Büyük ölçekli özel projeler için Türkiye genelinde değerlendirme yapılmaktadır.",
-      en: "Ankara city centre and districts are our primary service area. Major-scale private projects are evaluated across Turkey.",
+      tr: "Merkezimiz Ankara olmak üzere; Çankaya, İncek, Gölbaşı, Çayyolu, Yenimahalle başta olmak üzere tüm Ankara genelinde ve Türkiye çapındaki seçkin villa, rezidans ve ticari projelerde anahtar teslim peyzaj tasarımı ve bahçe düzenleme hizmeti sunuyoruz.",
+      en: "Headquartered in Ankara, we deliver turnkey landscape architecture and garden design services across all Ankara districts (notably Çankaya, İncek, Gölbaşı, Çayyolu, Yenimahalle) as well as prominent villa, residential and commercial projects throughout Turkey.",
     },
   },
 ];

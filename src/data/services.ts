@@ -23,8 +23,8 @@ const servicesData: BilingualService[] = [
       en: "Landscape Design",
     },
     description: {
-      tr: "Arazinizin ruhunu okuyarak özgün, zamansız ve yaşayan bahçe projeleri tasarlıyoruz.",
-      en: "We design original, timeless and living garden projects by reading the soul of your land.",
+      tr: "Arazinizin iklim ve toprak koşullarına uygun, mekânın ruhunu yansıtan özgün ve zamansız bahçe projeleri tasarlıyoruz.",
+      en: "We design original, timeless and living garden projects suited to the climate, soil and soul of your land.",
     },
   },
   {
@@ -35,8 +35,8 @@ const servicesData: BilingualService[] = [
       en: "Garden Arrangement",
     },
     description: {
-      tr: "Bitki seçiminden zemin döşemesine kadar tüm bahçe düzenleme süreçlerini yönetiyoruz.",
-      en: "We manage all garden arrangement processes from plant selection to ground paving.",
+      tr: "Bitki seçiminden sert zemin döşemesine kadar tüm bahçe ve peyzaj düzenleme süreçlerini anahtar teslim yönetiyoruz.",
+      en: "We manage all garden arrangement and landscaping processes turnkey, from plant selection to hardscape paving.",
     },
   },
   {
@@ -47,8 +47,8 @@ const servicesData: BilingualService[] = [
       en: "Periodic Maintenance",
     },
     description: {
-      tr: "Bitkisel dokularınızı dört mevsim canlı tutmak için planlı ve uzman bakım hizmeti sunuyoruz.",
-      en: "We provide planned, expert maintenance to keep your planting vibrant throughout all four seasons.",
+      tr: "Peyzaj ve bahçe dokularınızı dört mevsim canlı tutmak için planlı ve uzman bakım hizmeti sunuyoruz.",
+      en: "We provide planned, expert maintenance to keep your landscape and planting vibrant throughout all four seasons.",
     },
   },
   {
